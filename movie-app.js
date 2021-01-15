@@ -31,9 +31,9 @@ const options = {
 $.ajax(movieApiUrl).done(function(data){
     data.forEach(function (movie){
        let movieHtml = "<tr>"
-        movieHtml += "<td>" + movie.title + "</td>"
-        movieHtml += `<td><img src='${movie.poster}'></td>`
-        movieHtml += "<td>" + movie.title + "</td></tr>"
+        movieHtml += `<td>Movie Title: <br>${ movie.title.toUpperCase()}</br></td>`
+        movieHtml += `<td>Movie Rating: <br>${movie.rating}</br></td>`
+        movieHtml += `<td>Movie Graphics:<br> <img src='${movie.poster}' style="width: 100px; height: 100px"></td></tr>`
         $("#movies").append(movieHtml)
     })
 })
