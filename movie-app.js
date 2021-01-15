@@ -27,6 +27,12 @@ const options = {
     body: JSON.stringify(movieObj),
 };
 
+
+$("#addNew").click(function(){
+
+    options
+})
+
 $.ajax(movieApiUrl).done(function (data) {
     data.forEach(function (movie) {
         let movieHtml = "<tr>"
